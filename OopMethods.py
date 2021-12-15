@@ -68,7 +68,7 @@ class BankAccount:
         self.balance -= amount
 
 
-vip_client = BankAccount('Vip client', 'Tim', 'Johns', 0.0)
+vip_client = BankAccount('Vip client', 'Tim', 'Johns')
 vip_client.add(15000)
 print(vip_client.balance)
 vip_client.withdraw(500)
