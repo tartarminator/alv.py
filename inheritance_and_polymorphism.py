@@ -43,49 +43,103 @@
 
 # Polymorphism (многообразие)
 
-class Dog:
-    def __init__(self, name):
+
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def speak(self):
+#         raise NotImplementedError('Class successor must implement this method.')
+#
+#
+# class Dog(Animal):
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def speak(self):
+#         print(self.name + ' is saying woof.')
+#
+#
+# class Cat(Animal):
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def speak(self):
+#         print(self.name + ' is saying meow.')
+#
+#
+# class Bird(Animal):
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def speak(self):
+#         print(self.name + ' is saying chi-chirik.')
+#
+#
+# class Fish(Animal):
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def speak(self):
+#         print(self.name + ' is saying nothing.')
+#
+#
+# tuzik = Dog('Tuzik')
+# simba = Cat('Simba')
+# shegol = Bird('Shegol')
+# freddy = Fish('Freddy')
+# pet_list = [tuzik, simba, shegol, freddy]
+#
+# # pet_list[0].speak()
+# # pet_list[1].speak()
+#
+#
+# for pet in pet_list:
+#     pet.speak()
+#
+#
+# def pet_voice(pet):
+#     pet.speak()
+#
+#
+# pet_voice(tuzik)
+# pet_voice(simba)
+# pet_voice(shegol)
+# pet_voice(freddy)
+
+
+class GameCharacter:
+    def __init__(self, name, health, level):
         self.name = name
+        self.health = health
+        self.level = level
 
     def speak(self):
-        print(self.name + ' is saying woof.')
+        print('Hi my name is ' + self.name)
 
 
-class Cat:
-    def __init__(self, name):
-        self.name = name
+class Villain(GameCharacter):
+    # def __init__(self, name, health, level):
+    #     self.name = name
+    #     self.health = health
+    #     self.level = level
+
+    def __init__(self, name, health,
+                 level):
+        GameCharacter.__init__(self, name, health,
+                               level)
 
     def speak(self):
-        print(self.name + ' is saying meow.')
+        print('Hi, my name is ' + self.name + ' and I will kill you.')
+
+    def kill(self, gamer):
+        gamer.health = 0
+        print('Bang-bang, now you\'re dead.')
 
 
-class Bird:
-    def __init__(self, name):
-        self.name = name
-
-    def speak(self):
-        print(self.name + ' is saying chi-chirik.')
-
-
-tuzik = Dog('Tuzik')
-simba = Cat('Simba')
-shegol = Bird('Shegol')
-
-pet_list = [tuzik, simba, shegol]
-
-# pet_list[0].speak()
-# pet_list[1].speak()
-
-
-for pet in pet_list:
-    pet.speak()
-
-
-def pet_voice(pet):
-    pet.speak()
-
-
-pet_voice(tuzik)
-pet_voice(simba)
-pet_voice(shegol)
-
+gamer_1 = GameCharacter('Piter', 100, 3)
+gamer_2 = Villain('Negorro', 80, 5)
+gamer_1.speak()
+gamer_2.speak()
+gamer_2.kill(gamer_1)
+print(gamer_1.health)
