@@ -42,3 +42,4 @@ print(volvo_truck.color)
 volvo_truck.load_cargo(10000)
 
 # Polymorphism
+
