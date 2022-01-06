@@ -36,26 +36,45 @@ counter = count_up_to(4)
 # for number in counter:
 #     print(number)
 
+#
+# def get_week_day():
+#     week = [
+#         'Sunday',
+#         'Monday',
+#         'Tuesday',
+#         'Wednesday',
+#         'Thursday',
+#         'Friday',
+#         'Saturday'
+#     ]
+#     for day in week:
+#         yield day
+#
+# today = get_week_day()
+#
+# print(today.__next__())
+# print(today.__next__())
+# print(today.__next__())
+# print(today.__next__())
+# print(today.__next__())
+# print(today.__next__())
+# print(today.__next__())
 
-def get_week_day():
-    week = [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday'
-    ]
-    for day in week:
-        yield day
 
-today = get_week_day()
+def even_odd():
+    string = 'even'
+    while True:
+        yield string
+    if string == 'even':
+        string = 'odd'
+    else:
+        string = 'even'
 
-print(today.__next__())
-print(today.__next__())
-print(today.__next__())
-print(today.__next__())
-print(today.__next__())
-print(today.__next__())
-print(today.__next__())
+
+
+even_odd_generator = even_odd()
+print(next(even_odd_generator))
+print(next(even_odd_generator))
+print(next(even_odd_generator))
+
+
