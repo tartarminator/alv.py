@@ -109,3 +109,11 @@ print(next(fib))
 print(next(fib))
 print(next(fib))
 
+# str = 'pfrhtgktybt vfnthbfkf'
+# def func():
+#     str = '*проверка*'
+#     def enclosed():
+#         print(str, end=' ')
+#     enclosed()
+# func()
+# print(str, end=' ')
