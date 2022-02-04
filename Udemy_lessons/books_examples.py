@@ -83,6 +83,7 @@ print(min(nums))
 print(max(nums))
 print(sum(nums))
 
+
 sorted_nums = sorted(nums)
 print(sorted_nums)
 sorted_nums.remove(sorted_nums[0])
@@ -93,3 +94,18 @@ while "Bob" in names:
     names.remove("Bob")
 
 print(names)
+
+x = -42.85
+abs_x = abs(x)
+print(f"Абсолютное значение {x} это {abs_x}")
+
+
+txt = 'this is an awesome text'
+l = txt.split()
+print(l)
+long_word = ''
+for word in l:
+    if len(word) > len(long_word):
+        long_word = word
+
+print(long_word)
