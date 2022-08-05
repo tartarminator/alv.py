@@ -32,7 +32,7 @@ p3_name, p3_price = 'Monitor', 124.89
 
 company_name = 'vakilov&Galimov brothers inc.'
 company_address = 'qora-Qamish 2/5 10'
-company_city = 'tashkent, UZ'
+company_city = 'Tashkent, UZ'
 
 message = 'Thanks you for shopping with us.'
 
